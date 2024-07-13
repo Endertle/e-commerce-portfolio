@@ -1,6 +1,9 @@
+// Components
 import { Product } from "@/types/Products";
 import ProductCardMini from "./ProductCardMini";
 import { Button } from "../ui/button";
+
+// Icons
 import { MinusIcon, PlusIcon } from "@heroicons/react/16/solid";
 import { TrashIcon } from "@heroicons/react/24/outline";
 
