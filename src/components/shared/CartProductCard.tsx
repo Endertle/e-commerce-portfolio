@@ -13,7 +13,7 @@ function CartProductCard({ price, rating, title }: CartProductCardProps) {
   return (
     <div className="flex flex-col gap-2">
       <ProductCardMini price={price} rating={rating} title={title} />
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col-reverse sm:flex-row sm:justify-between justify-end sm:items-center">
         <div className="flex gap-2">
           <div className="w-28 flex items-center justify-between">
             <Button variant={"ghost"} size={"icon"} className="border">
@@ -28,7 +28,7 @@ function CartProductCard({ price, rating, title }: CartProductCardProps) {
             <TrashIcon className="w-4 h-4 text-red-500" />
           </Button>
         </div>
-        <span className="font-medium">₱200.00</span>
+        <span className="font-medium">Total: ₱200.00</span>
       </div>
     </div>
   );
