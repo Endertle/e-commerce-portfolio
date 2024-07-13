@@ -12,16 +12,17 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import AddToCartButton from "./AddToCartButton";
+import Rate from "./Rate";
+import { Button } from "../ui/button";
 
 // Icons
-import { Button } from "../ui/button";
 import { HeartIcon } from "@heroicons/react/24/outline";
-import Rate from "./Rate";
 import { Product } from "@/types/Products";
 
 type ProductCardProps = Product;
 
-function ProductCard({ title, price, rating }: ProductCardProps) {
+function ProductCard({ title, id, price, rating }: ProductCardProps) {
   return (
     <Card className="shadow-sm overflow-hidden">
       <div className="bg-zinc-200 w-full aspect-square"></div>
@@ -44,7 +45,7 @@ function ProductCard({ title, price, rating }: ProductCardProps) {
         </CardDescription>
       </CardHeader>
       <CardFooter className="gap-4">
-        <Button className="w-full">Add to Cart</Button>
+        <AddToCartButton id={id} price={price} title={title} rating={rating} />
         <Button variant={"ghost"} size={"icon"} className="p-1">
           <HeartIcon className="w-7 h-7" />
         </Button>

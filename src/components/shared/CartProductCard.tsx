@@ -1,34 +1,46 @@
 // Components
-import { Product } from "@/types/Products";
 import ProductCardMini from "./ProductCardMini";
 import { Button } from "../ui/button";
+import CartProductCardQuantity from "./CartProductCardQuantity";
 
 // Icons
-import { MinusIcon, PlusIcon } from "@heroicons/react/16/solid";
 import { TrashIcon } from "@heroicons/react/24/outline";
 
-type CartProductCardProps = Product;
+// Utils
+import { formatter } from "@/utils/formatter";
+import { CartItem } from "@/types/Cart";
 
-function CartProductCard({ price, rating, title }: CartProductCardProps) {
+// Redux
+import { useDispatch } from "react-redux";
+import { removeFromCart } from "@/slices/cartSlice";
+
+type CartProductCardProps = CartItem;
+
+function CartProductCard({
+  product: { id, price, rating, title },
+  quantity,
+  totalAmount,
+}: CartProductCardProps) {
+  const dispatch = useDispatch();
+
   return (
     <div className="flex flex-col gap-2">
       <ProductCardMini price={price} rating={rating} title={title} />
       <div className="flex flex-col-reverse sm:flex-row sm:justify-between justify-end sm:items-center">
         <div className="flex gap-2">
-          <div className="w-28 flex items-center justify-between">
-            <Button variant={"ghost"} size={"icon"} className="border">
-              <MinusIcon className="w-3 h-3" />
-            </Button>
-            <span className="text-sm">2</span>
-            <Button variant={"ghost"} size={"icon"} className="border">
-              <PlusIcon className="w-3 h-3" />
-            </Button>
-          </div>
-          <Button variant={"ghost"} size={"icon"} className="border">
+          <CartProductCardQuantity productId={id} quantity={quantity} />
+          <Button
+            onClick={() => dispatch(removeFromCart(id))}
+            variant={"ghost"}
+            size={"icon"}
+            className="border"
+          >
             <TrashIcon className="w-4 h-4 text-red-500" />
           </Button>
         </div>
-        <span className="font-medium">Total: ₱200.00</span>
+        <span className="font-medium">
+          Total: {formatter.format(totalAmount)}
+        </span>
       </div>
     </div>
   );

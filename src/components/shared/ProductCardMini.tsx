@@ -11,7 +11,7 @@ import Rate from "./Rate";
 // React Router Dom
 import { Link } from "react-router-dom";
 
-type ProductCardMiniProps = Product;
+type ProductCardMiniProps = Omit<Product, "id">;
 
 function ProductCardMini({ title, price, rating }: ProductCardMiniProps) {
   return (
