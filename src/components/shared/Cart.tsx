@@ -15,11 +15,13 @@ import { ScrollArea } from "../ui/scroll-area";
 function Cart() {
   return (
     <Sheet>
+      {/* Trigger for the sheet */}
       <SheetTrigger asChild>
         <Button variant={"ghost"} size={"icon"}>
           <ShoppingCartIcon className="w-6 h-6" />
         </Button>
       </SheetTrigger>
+      {/* Content of the sheet component */}
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Cart</SheetTitle>
