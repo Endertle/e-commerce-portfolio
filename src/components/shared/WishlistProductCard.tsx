@@ -1,6 +1,11 @@
+// Types
 import { Product } from "@/types/Products";
+
+// Components
 import ProductCardMini from "./ProductCardMini";
 import { Button } from "../ui/button";
+
+// Icons
 import { TrashIcon } from "@heroicons/react/24/outline";
 
 type WishlistProductCardProps = Product;

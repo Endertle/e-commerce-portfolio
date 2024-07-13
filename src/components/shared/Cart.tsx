@@ -1,4 +1,7 @@
+// Icons
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+
+// Components
 import { Button } from "../ui/button";
 import {
   Sheet,

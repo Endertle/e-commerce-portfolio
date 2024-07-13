@@ -1,3 +1,4 @@
+// Components
 import { Button } from "../ui/button";
 
 function HeroBanner() {

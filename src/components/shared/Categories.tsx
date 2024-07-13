@@ -1,4 +1,7 @@
+// React Router Dom
 import { Link } from "react-router-dom";
+
+// Components
 import { Badge } from "../ui/badge";
 
 const categories = [

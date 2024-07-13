@@ -1,3 +1,4 @@
+// Icons
 import { StarIcon } from "@heroicons/react/16/solid";
 
 type RateProps = {

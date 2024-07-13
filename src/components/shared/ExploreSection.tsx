@@ -1,3 +1,4 @@
+// Components
 import Collections from "./Collections";
 import SideBarSection from "./SideBarSection";
 

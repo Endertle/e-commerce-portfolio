@@ -1,9 +1,13 @@
+// Types
 import { Product } from "@/types/Products";
+
+// Components
 import ProductCardMini from "./ProductCardMini";
 
 type ProductListProps = {
   products: Product[];
 };
+
 function ProductList({ products }: ProductListProps) {
   return (
     <ul className="flex flex-col gap-5">

@@ -1,3 +1,4 @@
+// Components
 import { Separator } from "../ui/separator";
 import Categories from "./Categories";
 import NewArrivals from "./NewArrivals";
