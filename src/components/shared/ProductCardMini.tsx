@@ -1,5 +1,5 @@
 // Components
-import { ProductType } from "@/types/Products";
+import { Product } from "@/types/Products";
 import {
   Tooltip,
   TooltipContent,
@@ -11,7 +11,7 @@ import Rate from "./Rate";
 // React Router Dom
 import { Link } from "react-router-dom";
 
-type ProductCardMiniProps = ProductType;
+type ProductCardMiniProps = Product;
 
 function ProductCardMini({ title, price, rating }: ProductCardMiniProps) {
   return (

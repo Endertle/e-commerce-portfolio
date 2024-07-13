@@ -7,6 +7,8 @@ import {
 
 // Components
 import { Button } from "../ui/button";
+import Cart from "./Cart";
+import Wishlist from "./Wishlist";
 
 function HeaderButtons() {
   return (
@@ -17,12 +19,8 @@ function HeaderButtons() {
       </Button>
 
       {/* Shows in every deveices */}
-      <Button variant={"ghost"} size={"icon"}>
-        <HeartIcon className="w-6 h-6" />
-      </Button>
-      <Button variant={"ghost"} size={"icon"}>
-        <ShoppingCartIcon className="w-6 h-6" />
-      </Button>
+      <Wishlist />
+      <Cart />
     </div>
   );
 }
