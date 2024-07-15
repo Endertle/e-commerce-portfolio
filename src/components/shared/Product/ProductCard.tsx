@@ -14,10 +14,8 @@ import {
 } from "@/components/ui/tooltip";
 import AddToCartButton from "./AddToCartButton";
 import Rate from "./Rate";
-import { Button } from "../ui/button";
 
 // Icons
-import { HeartIcon } from "@heroicons/react/24/outline";
 import { Product } from "@/types/Products";
 
 // Utils

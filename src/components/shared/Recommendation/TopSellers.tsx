@@ -1,5 +1,5 @@
 // Components
-import ProductList from "./ProductList";
+import ProductList from "../Product/ProductList";
 
 const products = [
   {

@@ -1,5 +1,5 @@
-import ExploreSection from "@/components/shared/ExploreSection";
-import HeroBanner from "@/components/shared/HeroBanner";
+import ExploreSection from "@/components/shared/Recommendation/ExploreSection";
+import HeroBanner from "@/components/shared/Header/HeroBanner";
 
 function Home() {
   return (

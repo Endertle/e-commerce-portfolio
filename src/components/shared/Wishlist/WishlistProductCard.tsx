@@ -2,9 +2,9 @@
 import { Product } from "@/types/Products";
 
 // Components
-import ProductCardMini from "./ProductCardMini";
-import { Button } from "../ui/button";
-import AddToCartButton from "./AddToCartButton";
+import ProductCardMini from "../Product/ProductCardMini";
+import { Button } from "../../ui/button";
+import AddToCartButton from "../Product/AddToCartButton";
 
 // Icons
 import { TrashIcon } from "@heroicons/react/24/outline";

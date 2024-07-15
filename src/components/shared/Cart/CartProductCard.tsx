@@ -1,6 +1,6 @@
 // Components
-import ProductCardMini from "./ProductCardMini";
-import { Button } from "../ui/button";
+import ProductCardMini from "../Product/ProductCardMini";
+import { Button } from "../../ui/button";
 import CartProductCardQuantity from "./CartProductCardQuantity";
 
 // Icons

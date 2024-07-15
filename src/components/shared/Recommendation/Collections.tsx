@@ -1,5 +1,5 @@
 // Components
-import ProductCard from "./ProductCard";
+import ProductCard from "../Product/ProductCard";
 
 // Utils
 import { products } from "@/utils/products";

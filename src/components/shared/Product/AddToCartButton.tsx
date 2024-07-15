@@ -2,7 +2,7 @@
 import { useDispatch } from "react-redux";
 
 // Components
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 // Types
 import { Product } from "@/types/Products";

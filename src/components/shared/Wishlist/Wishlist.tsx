@@ -2,7 +2,7 @@
 import { HeartIcon } from "@heroicons/react/24/outline";
 
 // Components
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import {
   Sheet,
   SheetContent,
@@ -13,7 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import WishlistProductList from "./WishlistProductList";
-import { ScrollArea } from "../ui/scroll-area";
+import { ScrollArea } from "../../ui/scroll-area";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";

@@ -2,7 +2,7 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 // Components
-import { Input } from "../ui/input";
+import { Input } from "../../ui/input";
 
 function HeaderSearchInput() {
   return (

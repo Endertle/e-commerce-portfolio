@@ -1,6 +1,6 @@
 // Components
 import { useSelector } from "react-redux";
-import { Separator } from "../ui/separator";
+import { Separator } from "../../ui/separator";
 import WishlistProductCard from "./WishlistProductCard";
 import { RootState } from "@/store";
 

@@ -1,14 +1,10 @@
 // Icons
-import {
-  HeartIcon,
-  MagnifyingGlassIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 // Components
-import { Button } from "../ui/button";
-import Cart from "./Cart";
-import Wishlist from "./Wishlist";
+import { Button } from "../../ui/button";
+import Cart from "../Cart/Cart";
+import Wishlist from "../Wishlist/Wishlist";
 
 function HeaderButtons() {
   return (

@@ -1,5 +1,5 @@
 // Components
-import { Separator } from "../ui/separator";
+import { Separator } from "../../ui/separator";
 import Categories from "./Categories";
 import NewArrivals from "./NewArrivals";
 import TopSellers from "./TopSellers";

@@ -2,8 +2,8 @@
 import { Link } from "react-router-dom";
 
 // Components
-import HeaderSearchInput from "../shared/HeaderSearchInput";
-import HeaderButtons from "../shared/HeaderButtons";
+import HeaderSearchInput from "../shared/Header/HeaderSearchInput";
+import HeaderButtons from "../shared/Header/HeaderButtons";
 
 // utils
 import { ONLINE_STORE_NAME } from "@/utils/constants";

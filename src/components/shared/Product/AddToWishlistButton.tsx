@@ -2,7 +2,7 @@
 import { HeartIcon } from "@heroicons/react/24/outline";
 
 // Components
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 // Redux
 import { useDispatch } from "react-redux";

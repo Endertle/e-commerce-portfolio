@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 // Components
-import { Badge } from "../ui/badge";
+import { Badge } from "../../ui/badge";
 
 const categories = [
   { name: "Home Decor", value: 6 },

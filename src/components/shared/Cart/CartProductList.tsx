@@ -1,5 +1,5 @@
 // Components
-import { Separator } from "../ui/separator";
+import { Separator } from "../../ui/separator";
 import CartProductCard from "./CartProductCard";
 
 // Redux
