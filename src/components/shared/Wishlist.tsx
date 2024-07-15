@@ -15,12 +15,24 @@ import {
 import WishlistProductList from "./WishlistProductList";
 import { ScrollArea } from "../ui/scroll-area";
 
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/store";
+import { addAllToCart, clearWishlist } from "@/slices/wishlistSlice";
+
 function Wishlist() {
+  const wishlistCount = useSelector((state: RootState) => state.wishlist.count);
+  const dispatch = useDispatch<AppDispatch>();
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant={"ghost"} size={"icon"}>
-          <HeartIcon className="w-6 h-6" />
+        <Button variant={"ghost"} size={"icon"} className="relative">
+          <HeartIcon className="w-6 h-6" />{" "}
+          {!!wishlistCount && (
+            <span className="absolute -top-1 -right-1 py-1 px-2 rounded-full bg-red-600 text-white text-xs">
+              {wishlistCount}
+            </span>
+          )}
         </Button>
       </SheetTrigger>
       <SheetContent>
@@ -34,10 +46,16 @@ function Wishlist() {
           <WishlistProductList />
         </ScrollArea>
         <SheetFooter className="gap-2 w-full py-4">
-          <Button variant={"ghost"} className="border">
+          <Button
+            onClick={() => dispatch(clearWishlist())}
+            variant={"ghost"}
+            className="border"
+          >
             Clear Wishlist
           </Button>
-          <Button>Add All to Cart</Button>
+          <Button onClick={() => dispatch(addAllToCart())}>
+            Add All to Cart
+          </Button>
         </SheetFooter>
       </SheetContent>
     </Sheet>

@@ -20,6 +20,10 @@ import { Button } from "../ui/button";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { Product } from "@/types/Products";
 
+// Utils
+import { formatter } from "@/utils/formatter";
+import AddToWishlistButton from "./AddToWishlistButton";
+
 type ProductCardProps = Product;
 
 function ProductCard({ title, id, price, rating }: ProductCardProps) {
@@ -41,14 +45,17 @@ function ProductCard({ title, id, price, rating }: ProductCardProps) {
         </CardTitle>
         <CardDescription>
           <Rate rating={rating} />
-          <span>₱{price}</span>
+          <span>{formatter.format(price)}</span>
         </CardDescription>
       </CardHeader>
       <CardFooter className="gap-4">
         <AddToCartButton id={id} price={price} title={title} rating={rating} />
-        <Button variant={"ghost"} size={"icon"} className="p-1">
-          <HeartIcon className="w-7 h-7" />
-        </Button>
+        <AddToWishlistButton
+          id={id}
+          price={price}
+          title={title}
+          rating={rating}
+        />
       </CardFooter>
     </Card>
   );

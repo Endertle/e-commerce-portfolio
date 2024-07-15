@@ -6,6 +6,8 @@ import { Button } from "../ui/button";
 
 // Types
 import { Product } from "@/types/Products";
+import { addToCartWishlist } from "@/slices/wishlistSlice";
+import { AppDispatch } from "@/store";
 
 // Props
 type AddToCartButtonProps = Product;
@@ -17,11 +19,13 @@ function AddToCartButton({
   title,
   image,
 }: AddToCartButtonProps) {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   return (
     <Button
-      onClick={() => dispatch(addToCart({ id, price, rating, title, image }))}
+      onClick={() =>
+        dispatch(addToCartWishlist({ id, price, rating, title, image }))
+      }
       className="w-full"
     >
       Add to Cart
