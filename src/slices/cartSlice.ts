@@ -47,11 +47,19 @@ const cartSlice = createSlice({
       state.count -= 1;
     },
     clearCart: (state) => {
+      if (state.count === 0) {
+        toast.error("Cart is empty.");
+        return;
+      }
+
       // Clear the cart items
       state.items = [];
 
       // Set count to 0
       state.count = 0;
+
+      // Show success message
+      toast.success("Cart is cleared.");
     },
     increaseQuantity: (state, action: PayloadAction<number>) => {
       state.items = state.items.map((item) => {
@@ -83,12 +91,29 @@ const cartSlice = createSlice({
         return item;
       });
     },
+
+    checkout: (state) => {
+      if (state.count === 0) {
+        toast.error("There is no item to checkout.");
+        return;
+      }
+
+      // Clear the cart items
+      state.items = [];
+
+      // Set count to 0
+      state.count = 0;
+
+      // Show successful message
+      toast.success("Checkout successfully.");
+    },
   },
 });
 
 export const {
   clearCart,
   addToCart,
+  checkout,
   removeFromCart,
   decreaseQuantity,
   increaseQuantity,

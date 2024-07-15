@@ -1,6 +1,6 @@
 // Redux
 import { useDispatch } from "react-redux";
-import { addToCart } from "@/slices/cartSlice";
+
 // Components
 import { Button } from "../ui/button";
 

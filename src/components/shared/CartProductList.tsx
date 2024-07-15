@@ -7,10 +7,10 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 
 function CartProductList() {
-  const cart = useSelector((state: RootState) => state.cart);
+  const cart = useSelector((state: RootState) => state.cart.items);
   return (
     <div className="flex flex-col gap-4 my-2">
-      {cart.items.map((item) => (
+      {cart.map((item) => (
         <div key={item.product.id}>
           <CartProductCard
             product={item.product}

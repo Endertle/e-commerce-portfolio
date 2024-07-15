@@ -5,7 +5,7 @@ import WishlistProductCard from "./WishlistProductCard";
 import { RootState } from "@/store";
 
 function WishlistProductList() {
-  const wishlist = useSelector((state: RootState) => state.wishlist.products);
+  const wishlist = useSelector((state: RootState) => state.wishlist.items);
   return (
     <div className="flex flex-col gap-4 my-2">
       {wishlist.map((product) => (

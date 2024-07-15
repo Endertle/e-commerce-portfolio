@@ -17,7 +17,7 @@ import { ScrollArea } from "../ui/scroll-area";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
-import { clearCart } from "@/slices/cartSlice";
+import { checkout, clearCart } from "@/slices/cartSlice";
 import { RootState } from "@/store";
 
 function Cart() {
@@ -56,7 +56,7 @@ function Cart() {
           >
             Clear Cart
           </Button>
-          <Button>Checkout</Button>
+          <Button onClick={() => dispatch(checkout())}>Checkout</Button>
         </SheetFooter>
       </SheetContent>
     </Sheet>

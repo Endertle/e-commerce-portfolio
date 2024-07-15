@@ -11,7 +11,7 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
         {/* Toaster */}
-        <Toaster closeButton={true} />
+        <Toaster closeButton={true} position="bottom-left" />
       </Layout>
     </Router>
   );

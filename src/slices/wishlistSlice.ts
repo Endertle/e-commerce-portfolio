@@ -5,12 +5,12 @@ import { addToCart } from "./cartSlice";
 import { AppThunk } from "@/store";
 
 export type Wishlist = {
-  products: Product[];
+  items: Product[];
   count: number;
 };
 
 const initialState: Wishlist = {
-  products: [],
+  items: [],
   count: 0,
 };
 
@@ -19,7 +19,7 @@ const wishlistSlice = createSlice({
   initialState,
   reducers: {
     addToWishlist: (state, action: PayloadAction<Product>) => {
-      const productExist = state.products.find(
+      const productExist = state.items.find(
         (product) => product.id === action.payload.id
       );
 
@@ -29,7 +29,7 @@ const wishlistSlice = createSlice({
       }
 
       // Add new wishlist
-      state.products.push(action.payload);
+      state.items.push(action.payload);
 
       // Increase wishlist count
       state.count += 1;
@@ -43,7 +43,7 @@ const wishlistSlice = createSlice({
       if (state.count == 0) return;
 
       // Remove wishlist
-      state.products = state.products.filter(
+      state.items = state.items.filter(
         (product) => product.id !== action.payload
       );
 
@@ -52,11 +52,19 @@ const wishlistSlice = createSlice({
     },
 
     clearWishlist: (state) => {
+      if (state.count === 0) {
+        toast.error("Wishlist is empty.");
+        return;
+      }
+
       // Reset count to 0
       state.count = 0;
 
       // Clear the wishlist
-      state.products = [];
+      state.items = [];
+
+      // Show success message
+      toast.success("Wishlist is cleared.");
     },
   },
 });
@@ -69,7 +77,7 @@ export const addAllToCart = (): AppThunk => (dispatch, getState) => {
     return;
   }
 
-  wishlist.products.forEach((product) => {
+  wishlist.items.forEach((product) => {
     dispatch(addToCart(product));
   });
 
